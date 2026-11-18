@@ -1,0 +1,5 @@
+# node_modules
+node_modules/
+
+# Visual Studio Code Debug
+.vscode/
