@@ -8,6 +8,7 @@
     "express-error-handler": "^1.1.0",
     "express-session": "^1.19.0",
     "mongodb": "^7.9.0",
-    "mongoose": "^9.12.2"
+    "mongoose": "^9.12.2",
+    "mysql": "^2.18.1"
   }
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로그인</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			padding: 24px;
+			background: #f3f5f9;
+			color: #202735;
+			font-family: Arial, sans-serif;
+		}
+		.login-card {
+			width: 100%;
+			max-width: 380px;
+			padding: 36px;
+			border-radius: 14px;
+			background: #fff;
+			box-shadow: 0 10px 30px rgba(27, 39, 61, 0.1);
+		}
+		h1 { margin: 0 0 8px; text-align: center; font-size: 26px; }
+		.description { margin: 0 0 28px; color: #697386; text-align: center; }
+		label { display: block; margin: 16px 0 7px; font-size: 14px; font-weight: 600; }
+		input {
+			width: 100%;
+			padding: 12px 14px;
+			border: 1px solid #d8deea;
+			border-radius: 7px;
+			font: inherit;
+		}
+		input:focus { outline: 2px solid #a9c5ff; border-color: #3977e8; }
+		button {
+			width: 100%;
+			margin-top: 24px;
+			padding: 13px;
+			border: 0;
+			border-radius: 7px;
+			background: #3977e8;
+			color: #fff;
+			font: inherit;
+			font-weight: 700;
+			cursor: pointer;
+		}
+		button:hover { background: #2864d0; }
+	</style>
+</head>
+<body>
+	<main class="login-card">
+		<h1>MySQL 사용자 추가</h1>
+		<p class="description">사용자 정보를 입력해 주세요.</p>
+		<form action="/process/adduser" method="post">
+			<label for="email">아이디</label>
+			<input id="id" name="id" type="email" autocomplete="username" placeholder="name@example.com" required>
+
+			<label for="name">사용자명</label>
+			<input id="name" name="name" type="text">
+
+			<label for="age">나이</label>
+			<input id="age" name="age">
+
+			<label for="password">비밀번호</label>
+			<input id="password" name="password" type="password" autocomplete="current-password" placeholder="비밀번호를 입력하세요" required>
+
+			<button type="submit" value="전송" name="">추가</button>
+		</form>
+	</main>
+</body>
+</html>
